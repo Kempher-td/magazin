@@ -12,7 +12,11 @@ class Shop {
     var storage: [String] = []
     var closed: Bool = true
     var onShopClosed: () -> () = {}
-
+    func doublesell(){
+  sell()
+  sell()
+        
+    }
     init() {
         updateWorkingStatus()
         if let savedStorage = UserDefaults.standard.array(forKey: "ShopStorage") as? [String] {
